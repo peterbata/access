@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 13, 2018 at 03:17 PM
+-- Generation Time: Feb 13, 2018 at 06:02 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -45,15 +45,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `fname`, `lname`, `address`, `suite`, `city`, `province`, `postalcode`, `country`, `gender`, `notes`, `created_at`, `updated_at`) VALUES
-(1, 'Mr', 'Eddie', 'Leschiutta', '332 de Lausanne', '406', 'Montreal', 'Quebec', 'H7M6B5', 'Canada', 'Male', 'Deposited money in his GIC today', '2018-02-13 02:19:35', '2018-02-13 02:19:35'),
-(2, 'Miss', 'Lucy', 'Amaral', '759 rue Legendre', '203', 'Saint-Leonard', 'Quebec', 'H7N4B2', 'Canada', 'Female', 'Meeting Monday morning', '2018-02-13 02:27:41', '2018-02-13 02:27:41');
+(7, 'Mrs', 'Elizabeth', 'Sutherland', '190 Kindersley', '5', 'TMR', 'Quebec', 'H3R3K7', 'Canada', 'Female', 'Parks spouse', '2018-02-13 18:01:14', '2018-02-13 18:01:14');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
