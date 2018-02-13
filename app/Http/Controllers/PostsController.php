@@ -23,7 +23,14 @@ class PostsController extends Controller
     
     public function store(Request $request)
     {
-        $posts = new Post;
+		$this->validate($request, [
+			'fname' => 'required',
+			'lname' => 'required',
+			'address' => 'required'
+		]);
+
+		// Create Post
+		$posts = new Post;
 		$posts->title = $request->input('title');
 		$posts->fname = $request->input('fname');
 		$posts->lname = $request->input('lname');
@@ -63,6 +70,8 @@ class PostsController extends Controller
     
     public function destroy($id)
     {
-        //
+		$posts = Post::find($id);
+		$posts->delete();
+		return redirect('/posts')->with('success', 'Client Deleted');
     }
 }
