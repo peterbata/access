@@ -24,7 +24,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $posts = new Post;
-		$posts->fname = $request->input('title');
+		$posts->title = $request->input('title');
 		$posts->fname = $request->input('fname');
 		$posts->lname = $request->input('lname');
 		$posts->address = $request->input('address');
