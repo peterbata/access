@@ -10,7 +10,7 @@
             <a class="nav-link" href="/access/public">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/access/public/contacts">Contacts</a>
+            <a class="nav-link" href="/access/public/contact">Contacts</a>
           </li>
         </ul>
         </form>
