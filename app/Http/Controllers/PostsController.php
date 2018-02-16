@@ -10,8 +10,9 @@ class PostsController extends Controller
     
     public function index()
     {
-		$posts = Post::orderBy('lname', 'asc')->paginate(3);
-		return view('posts.index')->with('posts', $posts);
+		$posts = Post::latest()->paginate(10);
+		return view('posts.index',compact('posts'))
+			->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     
@@ -26,10 +27,11 @@ class PostsController extends Controller
 		$this->validate($request, [
 			'fname' => 'required',
 			'lname' => 'required',
-			'address' => 'required'
+			'address' => 'required',
 		]);
 
 		// Create Post
+			// Create Post
 		$posts = new Post;
 		$posts->title = $request->input('title');
 		$posts->fname = $request->input('fname');
@@ -45,6 +47,7 @@ class PostsController extends Controller
 		$posts->save();
 
 		return redirect('/posts')->with('success', 'Client Created');
+		
     }
 
     
