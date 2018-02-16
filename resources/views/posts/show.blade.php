@@ -10,7 +10,7 @@
 	<hr>
 	<small>Creation Date: {{$posts->created_at}}</small>
 	<hr>
-	<a href="/posts/{{$posts->id}}/edit" class="btn btn-default">Edit</a>
+	<a href="/access/public/posts/{{$posts->id}}/edit" class="btn btn-default">Edit</a>
 
 	{!! Form::open(['action' => ['PostsController@destroy', $posts->id], 'method' => 'POST', 'class' => 'pull-right']) !!}
 		{{Form::hidden('_method', 'DELETE')}}
